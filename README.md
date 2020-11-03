@@ -24,19 +24,25 @@ AppointX is a cross-platform mobile and web support application for booking onli
 * Attractive user interface ✔️
  # Checkout the video 
 [![video](https://user-images.githubusercontent.com/61155876/97987627-a2333e80-1e01-11eb-9f5c-b8b847d59a9b.JPG)](https://www.youtube.com/watch?v=S5Q6MJ33OjA&feature=youtu.be)
+
 # Some mobile app snippets
+
 ##   Onboarding screen
 ![kool](https://user-images.githubusercontent.com/61155876/97985937-f7218580-1dfe-11eb-84d5-0d78f372235f.JPG)
+
 ##   Login to main dashboard screen
 ![1](https://user-images.githubusercontent.com/72252351/97773407-80be2280-1b75-11eb-8523-cb326ea79edf.JPG)
+
 ## Diagnose centre using tensorflow lite (deep learning)
 ![1111111](https://user-images.githubusercontent.com/61155876/97988778-84ff6f80-1e03-11eb-9c35-108d13955652.JPG)
 ![1111111111111](https://user-images.githubusercontent.com/61155876/97988780-86309c80-1e03-11eb-9907-6ae368eedf3f.JPG)
 
 ##  Blood bank section
 ![bb](https://user-images.githubusercontent.com/61155876/97985427-41563700-1dfe-11eb-99b9-1463fcb72763.JPG)
+
 ###   Need blood and donate blood  section
 ![2](https://user-images.githubusercontent.com/72252351/97773492-283b5500-1b76-11eb-9f1a-1a4f0a16b947.JPG)
+
 ## SOS Center
 ![sos](https://user-images.githubusercontent.com/61155876/97987416-423c9800-1e01-11eb-960d-6a9856d34f44.JPG)
 
