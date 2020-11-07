@@ -1,6 +1,7 @@
 import 'package:flutte_app/bloodbankwrapper.dart';
 import 'package:flutte_app/diagnosis.dart';
 import 'package:flutte_app/hospitals.dart';
+import 'package:flutte_app/listHospitals.dart';
 import 'package:flutte_app/sos.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -268,7 +269,7 @@ class HomePage extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  Hospitals())),
+                                                  HospitalList())),
                                       child: Card(
                                         elevation: 10,
                                         shape: RoundedRectangleBorder(

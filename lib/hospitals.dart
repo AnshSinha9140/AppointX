@@ -53,8 +53,10 @@ class _HospitalsState extends State<Hospitals> {
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       child: ListTile(
-                        onTap: () => Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => Doctors())),
+                        onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Doctors('', ''))),
                         title: Text(
                           "hospital name",
                           style: TextStyle(

@@ -18,15 +18,6 @@ class _SOSState extends State<SOS> {
             "SOS Center",
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
-          leading: new IconButton(
-            icon: new Icon(
-              Icons.arrow_back_ios,
-              size: 26.0,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
         ),
         body: Column(
           children: [

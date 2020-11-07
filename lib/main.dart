@@ -1,5 +1,7 @@
 import 'package:flutte_app/Mainhomepage.dart';
 import 'package:flutte_app/bloodbankwrapper.dart';
+import 'package:flutte_app/listDoctors.dart';
+import 'package:flutte_app/listHospitals.dart';
 import 'package:flutte_app/mainappwrapper.dart';
 import 'package:flutte_app/models/user.dart';
 import 'package:flutte_app/services/auth.dart';
@@ -22,7 +24,9 @@ class MyApp extends StatelessWidget {
         //  home: BloodBankWrapper(),
         // home: HomePage(),
         // home:  Hospitaldetais(),
-        home: Mainwrapper(),
+        home: Mainwrapper(), /////
+        // home: HospitalList(),
+        // home: HospitalList(),
       ),
     );
   }

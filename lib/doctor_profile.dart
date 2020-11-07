@@ -1,12 +1,22 @@
+import 'package:flutte_app/payment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/rounded_picker.dart';
 
 class Doctors extends StatefulWidget {
+  String doctorName = '';
+  String speciality = '';
+
+  Doctors(String doctorName, String speciality) {
+    this.doctorName = doctorName;
+    this.speciality = speciality;
+  }
+
   @override
   _DoctorsState createState() => _DoctorsState();
 }
 
 class _DoctorsState extends State<Doctors> {
+  String fees = '500';
   @override
   Widget build(BuildContext context) {
     Future<DateTime> newDateTime;
@@ -19,7 +29,7 @@ class _DoctorsState extends State<Doctors> {
         ),
         Positioned(
             width: 350.0,
-            top: MediaQuery.of(context).size.height / 5,
+            top: MediaQuery.of(context).size.height / 4.5,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,144 +47,158 @@ class _DoctorsState extends State<Doctors> {
                         boxShadow: [
                           BoxShadow(blurRadius: 7.0, color: Colors.black)
                         ])),
-                SizedBox(height: 90.0),
+                SizedBox(height: 60.0),
                 Text(
-                  '      Dr Manjesh Rathi',
+                  widget.doctorName,
                   style: TextStyle(
-                      fontSize: 30.0,
+                      fontSize: 28.0,
                       fontWeight: FontWeight.bold,
-                      fontFamily: 'Montserrat'),
+                      fontFamily: 'Poppins'),
+                ),
+                SizedBox(height: 5.0),
+                Text(
+                  widget.speciality,
+                  style: TextStyle(
+                      fontSize: 19.0,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins'),
+                ),
+                SizedBox(height: 8.0),
+                Text(
+                  'Fee : Rs. $fees',
+                  style: TextStyle(
+                      fontFamily: 'Poppins',
+                      fontSize: 16.0,
+                      fontWeight: FontWeight.bold),
                 ),
                 SizedBox(height: 15.0),
-                Text(
-                  '         Neurologist specialist',
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Montserrat'),
+                Padding(
+                  padding: const EdgeInsets.all(2.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                            height: 30.0,
+                            width: 70.0,
+                            child: Material(
+                              borderRadius: BorderRadius.circular(20.0),
+                              shadowColor: Colors.redAccent,
+                              color: Colors.red,
+                              elevation: 7.0,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Center(
+                                  child: Text(
+                                    '9:00am',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                            height: 30.0,
+                            width: 70.0,
+                            child: Material(
+                              borderRadius: BorderRadius.circular(20.0),
+                              shadowColor: Colors.redAccent,
+                              color: Colors.red,
+                              elevation: 7.0,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Center(
+                                  child: Text(
+                                    '11:00am',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                            height: 30.0,
+                            width: 70.0,
+                            child: Material(
+                              borderRadius: BorderRadius.circular(20.0),
+                              shadowColor: Colors.redAccent,
+                              color: Colors.red,
+                              elevation: 7.0,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Center(
+                                  child: Text(
+                                    '4:00pm',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                ),
+                              ),
+                            )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                            height: 30.0,
+                            width: 70.0,
+                            child: Material(
+                              borderRadius: BorderRadius.circular(20.0),
+                              shadowColor: Colors.redAccent,
+                              color: Colors.red,
+                              elevation: 7.0,
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Center(
+                                  child: Text(
+                                    '5:00pm',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'Poppins'),
+                                  ),
+                                ),
+                              ),
+                            )),
+                      )
+                    ],
+                  ),
                 ),
-                Text(
-                  '       Book an appointment',
-                  style: TextStyle(
-                      fontSize: 17.0,
-                      fontStyle: FontStyle.italic,
-                      fontFamily: 'Montserrat'),
-                ),
-                SizedBox(height: 25.0),
+                SizedBox(height: 35.0),
                 Container(
                     height: 60.0,
-                    width: 290.0,
+                    width: 270.0,
                     child: Material(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(30.0),
                       shadowColor: Colors.greenAccent,
                       color: Colors.green,
                       elevation: 7.0,
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Payment(fees)));
+                        },
                         child: Center(
                           child: Text(
-                            'Tap on time slot to book appointment',
+                            'Book appointment',
                             style: TextStyle(
-                                color: Colors.white, fontFamily: 'Montserrat'),
+                                color: Colors.white,
+                                fontFamily: 'Poppins',
+                                fontSize: 21.0),
                           ),
                         ),
                       ),
                     )),
-                SizedBox(height: 25.0),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          height: 30.0,
-                          width: 60.0,
-                          child: Material(
-                            borderRadius: BorderRadius.circular(20.0),
-                            shadowColor: Colors.redAccent,
-                            color: Colors.red,
-                            elevation: 7.0,
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Center(
-                                child: Text(
-                                  '9:00am',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Montserrat'),
-                                ),
-                              ),
-                            ),
-                          )),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          height: 30.0,
-                          width: 60.0,
-                          child: Material(
-                            borderRadius: BorderRadius.circular(20.0),
-                            shadowColor: Colors.redAccent,
-                            color: Colors.red,
-                            elevation: 7.0,
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Center(
-                                child: Text(
-                                  '11:00am',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Montserrat'),
-                                ),
-                              ),
-                            ),
-                          )),
-                    ),
-                    Container(
-                        height: 30.0,
-                        width: 60.0,
-                        child: Material(
-                          borderRadius: BorderRadius.circular(20.0),
-                          shadowColor: Colors.redAccent,
-                          color: Colors.red,
-                          elevation: 7.0,
-                          child: GestureDetector(
-                            onTap: () {},
-                            child: Center(
-                              child: Text(
-                                '4:00pm',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: 'Montserrat'),
-                              ),
-                            ),
-                          ),
-                        )),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          height: 30.0,
-                          width: 60.0,
-                          child: Material(
-                            borderRadius: BorderRadius.circular(20.0),
-                            shadowColor: Colors.redAccent,
-                            color: Colors.red,
-                            elevation: 7.0,
-                            child: GestureDetector(
-                              onTap: () {},
-                              child: Center(
-                                child: Text(
-                                  '5:00pm',
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontFamily: 'Montserrat'),
-                                ),
-                              ),
-                            ),
-                          )),
-                    )
-                  ],
-                )
               ],
             )),
       ],
